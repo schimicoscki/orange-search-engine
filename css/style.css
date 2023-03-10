@@ -1,0 +1,258 @@
+body {
+    color:#031D5B;
+    background: #f8f8f8;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Encode Sans, sans-serif;
+}
+
+nav, .download {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+nav li:not(:last-child) {
+    padding-right: 36px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    font-style: normal;
+    font-weight: 700;
+
+}
+
+nav li a {
+color: #03135b;
+text-decoration: none;
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#mockup {
+    background: url("../images/mockup-orange-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    Width: 325px;
+    Height: 232px;
+    padding-bottom: 32px;
+}
+
+form {
+    background: #FFFFFF;
+    border: 1px solid #F8765E;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.152644);
+}
+
+input {
+    color: #000;
+    display: inline;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+#search-field {
+    border: none;
+    width: 100%;
+    padding: 12px 16px;
+    background-color: transparent;
+}
+
+#search-field::placeholder {
+    color: #B6BBC9;
+}
+
+#search-button {
+    background-image: url(../images/search-white-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 56px ;
+    border: none;
+    background-color: #F8765E;
+}
+
+#clear-button {
+    display: none;
+    background-image: url(../images/clear-input-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 56px ;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #e96750;
+    cursor: pointer;
+}
+
+#search-field:focus-visible {
+    outline: none;
+}
+
+#section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+}
+
+p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+ul img {
+    padding-right: 4px;
+}
+
+.download button {
+    background: #031D5B;
+    border-radius: 16px;
+    width: 168px;
+    height: 60px;
+    border: none;
+    filter: drop-shadow(0px 4px 4px rgba(3, 29, 91, 0.25));
+}
+
+.download button:hover {
+    background: #5b6c94;
+}
+
+.download button a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.rating p {
+    padding-left: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.rating img:last-of-type {
+    opacity: .5;
+}
+
+footer {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #b6bbc9
+}
+
+/* ALTERAÇÕES PARA O TAMANHO 768PX */
+
+@media screen and (min-width: 768px) {
+    #section {
+        width: 640px;
+    }
+
+    #mockup {
+        background-image: url("../images/mockup-orange-tablet.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 402px;
+        height: 286px;
+    }    
+
+    ul li {
+        display: inline;
+    }
+
+    ul li:not(:last-child) {
+        padding-right: 36px;
+    }
+}
+
+/* ALTERAÇÕES PARA O TAMANHO DESKTOP 1200PX */
+
+@media screen and (min-width: 1200px) {
+    nav {
+        flex-direction: row;
+        width: 1200px;
+
+    }
+
+    nav ul {
+        margin-left: auto;
+    }
+    
+    .content {
+        flex-direction: row-reverse;
+    }
+
+    #mockup {
+        background-image: url("../images/mockup-orange-desktop.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 623px;
+        height: 444px;
+    }  
+
+    #section {
+        width: 550px;
+        align-items: start;
+    }
+
+    h1, p {
+        text-align: left;
+    }
+
+    .download {
+        flex-direction: row;
+    }
+
+    .rating {
+        margin-left: 16px;
+    }
+}

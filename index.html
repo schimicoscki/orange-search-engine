@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>Orange Search Engine</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+        <nav>
         <img src="images/logo.svg" alt="">
         <ul>
             <li> <a href="#">Benefit</a></li>
@@ -16,10 +18,64 @@
         </ul>
     </nav>
 
+    <!-- Inicio do conteudo principal -->
+    <div class="content">
+        <div id="mockup"></div>
 
+        <div id="section">
+        <form action="">
+            <input id="search-field" type="text" placeholder="Search the web">
+            <input id="clear-button"type="reset" value="">
+            <input id="search-button"type="submit" value="">
+        </form>
 
+        <script type="text/javascript">
+            var resetb =  document.getElementById("clear-button");
+            var offcansearch = document.getElementById('search-field');
+            
+            offcansearch.addEventListener('keyup', function() {
+            var searchSminput = offcansearch.value.length;
+            if (searchSminput == 0) {
+                resetb.style.display = "none";
+            } else {
+                resetb.style.display = "block";
+            }
+            });
+            
+            resetb.addEventListener('click', function() {
+            resetb.style.display = "none";
+            offcansearch.focus();
+            });
+        </script>
 
+        <h1>Tired of your data being squeezed? Here to help!</h1>
+        <p>Get the online privacy protection you deserve for free with one download in the App Store:</p>
 
+        <ul>
+            <li> <img src="images/check-icon.svg" alt=""> Private search</li>
+            <li> <img src="images/check-icon.svg" alt=""> Tracker Blocking</li>
+            <li> <img src="images/check-icon.svg" alt=""> Site Encryption</li>
+        </ul>
+        
+            <div class="download">
+                <button>
+                    <a href="#">Download now</a>
+                </button>
+           
+                <div class="rating">
+                    <img src="images/star-icon.svg" alt="">
+                    <img src="images/star-icon.svg" alt="">
+                    <img src="images/star-icon.svg" alt="">
+                    <img src="images/star-icon.svg" alt="">
+                    <img src="images/star-icon.svg" alt="">
+                    <p>Rated 4/5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Privacy for everyone
+    </footer>    
 
 </body>
 </html>
